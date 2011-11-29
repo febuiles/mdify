@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rake'
 require 'date'
-
+# Generated with Rakegem (https://github.com/mojombo/rakegem/)
 #############################################################################
 #
 # Helper functions
