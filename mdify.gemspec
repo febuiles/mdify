@@ -43,7 +43,16 @@ Gem::Specification.new do |s|
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
   s.files = %w[
+    Gemfile
+    Gemfile.lock
     README.md
+    Rakefile
+    bin/mdify
+    lib/mdify.rb
+    lib/mdify/renderer.rb
+    mdify.gemspec
+    test.markdown
+    vendor/template.html
   ]
   # = MANIFEST =
 
