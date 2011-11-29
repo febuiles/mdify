@@ -41,8 +41,9 @@ it. To do this:
 1. Download [rvm.el](https://github.com/senny/rvm.el) and save it in your Emacs load path.
 2. Require it and set your Ruby version:
 
-    (require 'rvm)
-    (rvm-use-default)
+    `(require 'rvm)`
+    
+    `(rvm-use-default)`
 
 3. You should now be able to use the hook mentioned above.
 
