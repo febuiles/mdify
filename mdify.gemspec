@@ -51,7 +51,6 @@ Gem::Specification.new do |s|
     lib/mdify.rb
     lib/mdify/renderer.rb
     mdify.gemspec
-    test.markdown
     vendor/template.html
   ]
   # = MANIFEST =
