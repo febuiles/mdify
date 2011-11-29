@@ -13,7 +13,7 @@ module Mdify
       html = Redcarpet.new(@content).to_html
       document = render_html(@title, html)
       temp_file = create_temp_file(document)
-      exec "open #{temp_file}"
+      exec "launchy #{temp_file}"
     end
 
     def render_html(title, html)
