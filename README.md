@@ -35,6 +35,17 @@ Then create a new hook for the Markdown mode:
 
 Now you can press F5 inside any Markdown document to automatically preview it in your browser.
 
+If you are using RVM to manage your rubies then you will need to instruct Emacs to play nice with
+it. To do this:
+
+1. Download [rvm.el](https://github.com/senny/rvm.el) and save it in your Emacs load path.
+2. Require it and set your Ruby version:
+
+    (require 'rvm)
+    (rvm-use-default)
+
+3. You should now be able to use the hook mentioned above.
+
 Stylesheet
 ----
 The pretty styles are provided by Twitter's [Bootstrap](http://twitter.github.com/bootstrap/)
