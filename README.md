@@ -1,11 +1,11 @@
 mdify
 =====
+`mdify` is a tool for previewing Markdown documents right in your browser, with a nice stylesheet.
 
 ![Screenshot of mdify](http://i.imgur.com/OiRr5.png)
 
-About
+Usage
 -----
-`mdify` is a tool for previewing Markdown documents right in your browser, with a nice stylesheet.
 You can use it on your documents by running:
 
     mdify super_secret.md
