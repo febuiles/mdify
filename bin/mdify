@@ -4,4 +4,20 @@ lib_dir = File.join(File.dirname(__FILE__), '..', 'lib')
 $LOAD_PATH.unshift lib_dir if File.directory?(lib_dir)
 
 require 'mdify'
-Mdify.preview(ARGV.first)
+
+def print_usage
+  puts "usage: mdify file"
+  exit(-1)
+end
+
+print_usage if ARGV.empty?
+
+file = ARGV.first
+
+if File.exists?(file)
+  Mdify.preview(file)
+else
+  puts "mdify: #{file}: No such file or directory"
+end
+
+
