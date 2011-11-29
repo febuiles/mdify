@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    mdify (0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mdify!
