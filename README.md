@@ -1,7 +1,7 @@
 mdify
 =====
 
-![Screenshot of mdify](http://cl.ly/362v3j1o3i331i2O0b1U/Screen%20Shot%202011-11-28%20at%207.50.13%20PM.png)
+![Screenshot of mdify](http://i.imgur.com/OiRr5.png)
 
 About
 -----
