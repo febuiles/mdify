@@ -5,7 +5,7 @@ module Mdify
     attr_reader :title, :content
 
     def initialize(filename)
-      @title = filename
+      @title = filename.split("/").last
       @content = File.read(filename)
     end
 
@@ -15,6 +15,8 @@ module Mdify
       temp_file = create_temp_file(document)
       exec "launchy #{temp_file}"
     end
+
+    protected
 
     def render_html(title, html)
       template_file = File.read(HTML_TEMPLATE_PATH)
