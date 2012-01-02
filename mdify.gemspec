@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'mdify'
-  s.version           = '0.4'
-  s.date              = '2011-11-29'
+  s.version           = '1.0.0'
+  s.date              = '2012-01-02'
   s.rubyforge_project = 'mdify'
 
   ## Make sure your summary is short. The description may be as long
