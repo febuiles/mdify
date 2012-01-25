@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'mdify'
   s.version           = '1.0.1'
-  s.date              = '2012-01-02'
+  s.date              = '2012-01-25'
   s.rubyforge_project = 'mdify'
 
   ## Make sure your summary is short. The description may be as long
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
-  s.add_dependency("redcarpet")
+  s.add_dependency("redcarpet", "~> 1.9")
   s.add_dependency("launchy")
 
   ## List your development dependencies here. Development dependencies are

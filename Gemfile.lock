@@ -1,11 +1,17 @@
 PATH
   remote: .
   specs:
-    mdify (0.1)
+    mdify (1.0.1)
+      launchy
+      redcarpet (~> 1.9)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.2.6)
+    launchy (2.0.5)
+      addressable (~> 2.2.6)
+    redcarpet (1.17.2)
 
 PLATFORMS
   ruby
