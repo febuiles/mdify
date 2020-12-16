@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name              = 'mdify'
   s.version           = '1.2.0'
   s.date              = '2020-12-16'
-
+  s.licenses          =     ['MIT']
   ## Make sure your summary is short. The description may be as long
   ## as you like.
   s.summary     = "Preview Markdown documents with your browser"
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
   s.add_dependency("redcarpet", "~> 1.9")
-  s.add_dependency("launchy")
+  s.add_dependency("launchy", "~> 2.0")
 
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
