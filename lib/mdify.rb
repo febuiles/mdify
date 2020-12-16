@@ -6,7 +6,7 @@ require 'launchy'
 require 'mdify/renderer'
 
 module Mdify
-  VERSION = "1.1.0"
+  VERSION = "1.2.0"
 
   def self.preview(filename)
     Renderer.new(filename).render
