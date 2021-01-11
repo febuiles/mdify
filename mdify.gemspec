@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
-  s.add_dependency("redcarpet", "~> 1.9")
+  s.add_dependency("redcarpet", ">= 1.9", "< 4.0")
   s.add_dependency("launchy", "~> 2.0")
 
   ## List your development dependencies here. Development dependencies are
