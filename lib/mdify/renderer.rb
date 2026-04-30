@@ -1,38 +1,48 @@
 module Mdify
-  HTML_TEMPLATE_PATH = File.join(File.dirname(__FILE__), "..", "..", "vendor", "template.html")
+  HTML_TEMPLATE_PATH = File.expand_path("../../vendor/template.html", __dir__)
 
   class Renderer
+    MARKDOWN_OPTIONS = {
+      autolink: true,
+      fenced_code_blocks: true,
+      tables: true,
+      strikethrough: true,
+      superscript: true,
+      no_intra_emphasis: true,
+      space_after_headers: true
+    }.freeze
+
     attr_reader :title, :content
 
     def initialize(filename)
-      @title = filename.split("/").last
+      @title = File.basename(filename)
       @content = File.read(filename)
     end
 
     def render
-      html = Redcarpet.new(@content).to_html
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, MARKDOWN_OPTIONS)
+      html = markdown.render(@content)
       document = render_html(@title, html)
-      temp_file = create_temp_file(document)
-      if RUBY_PLATFORM.downcase.include?("darwin")
-        exec "open #{temp_file}"
-      else
-        exec "launchy #{temp_file}"
-      end
+      open_in_browser(write_html(document))
     end
 
     protected
 
-    def render_html(title, html)
-      template_file = File.read(HTML_TEMPLATE_PATH)
-      document = template_file.sub(/\{\{ title \}\}/, title)
-      document.sub!(/\{\{ body \}\}/, html)
+    def open_in_browser(path)
+      opener = RbConfig::CONFIG["host_os"] =~ /darwin/i ? "open" : "xdg-open"
+      system(opener, path)
     end
 
-    def create_temp_file(contents)
-      temp_file = Tempfile.new("mdify")
-      temp_file.write(contents)
-      temp_file.close
-      temp_file.path
+    def render_html(title, html)
+      template = File.read(HTML_TEMPLATE_PATH)
+      template.gsub("{{ title }}") { title }.sub("{{ body }}") { html }
+    end
+
+    def write_html(contents)
+      dir = Dir.mktmpdir("mdify")
+      path = File.join(dir, "#{File.basename(@title, ".*")}.html")
+      File.write(path, contents)
+      path
     end
   end
 end

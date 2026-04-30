@@ -1,22 +1,24 @@
 PATH
   remote: .
   specs:
-    mdify (1.2.0)
-      launchy (~> 2.0)
-      redcarpet (>= 1.9, < 4.0)
+    mdify (2.0.0)
+      redcarpet (~> 3.6)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
-    launchy (2.5.0)
-      addressable (~> 2.7)
-    public_suffix (4.0.6)
-    redcarpet (3.5.1)
+    minitest (5.27.0)
+    rake (13.4.2)
+    redcarpet (3.6.1)
 
 PLATFORMS
+  arm64-darwin-24
   ruby
 
 DEPENDENCIES
   mdify!
+  minitest (~> 5.20)
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.5.22
